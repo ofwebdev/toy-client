@@ -1,14 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
+import Notfound from "./components/NotFound/Notfound.jsx";
+import AddToy from "./components/AddToy/AddToy.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+  },
+  {
+    path: "/addToy",
+    element: <AddToy></AddToy>,
+  },
+  {
+    path: "*",
+    element: <Notfound />,
   },
 ]);
 
