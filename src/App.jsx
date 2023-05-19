@@ -1,9 +1,10 @@
 import { useState } from "react";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <>
-      <h1>Assignment 11</h1>
+      <Header />
     </>
   );
 }
