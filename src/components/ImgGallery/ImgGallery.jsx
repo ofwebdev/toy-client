@@ -16,21 +16,21 @@ function ImgGallery() {
   }, []);
   return (
     <>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-16">
         {galleryData.map((toy) => (
-          <>
-            <div class="relative group">
+          <React.Fragment key={toy.name}>
+            <div className="relative group">
               <img
                 src={toy.image}
                 alt="Image"
-                class="object-cover w-full h-full"
+                className="object-cover w-full h-full"
               />
 
-              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition-opacity flex items-center justify-center">
-                <h2 class="text-white text-lg font-semibold">{toy.name}</h2>
+              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition-opacity flex items-center justify-center">
+                <h2 className="text-white text-lg font-semibold">{toy.name}</h2>
               </div>
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </>

@@ -12,6 +12,8 @@ import AddToy from "./components/AddToy/AddToy.jsx";
 import AuthProvider from "./provider/AuthProvider.jsx";
 import Register from "./components/Auth/Register.jsx";
 import Login from "./components/Auth/Login.jsx";
+import ToyDetails from "./components/Details/ToyDetails.jsx";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,15 @@ const router = createBrowserRouter([
   {
     path: "/addToy",
     element: <AddToy></AddToy>,
+  },
+
+  {
+    path: "/view/:id",
+    element: (
+      <PrivateRoute>
+        <ToyDetails />
+      </PrivateRoute>
+    ),
   },
 
   {

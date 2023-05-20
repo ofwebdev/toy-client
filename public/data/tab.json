@@ -1,0 +1,51 @@
+{
+    "mathToys": [
+      {
+        "id": 1,
+        "name": "Math Toy 1",
+        "price": 19.99,
+        "rating": 4.5,
+        "imageUrl": "https://storebd.com.bd/wp-content/uploads/2021/01/Multicolor-Beads-Design-Educational-Wooden-Abacus-Toy-Children-Counting-Number-Early-Learning-Toy-For-Kid-Math.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Math Toy 2",
+        "price": 24.99,
+        "rating": 4.2,
+        "imageUrl": "https://m.media-amazon.com/images/I/71QWNBPqbGL._AC_SL1500_.jpg"
+      }
+    ],
+    "languageToys": [
+      {
+        "id": 3,
+        "name": "Language Toy 1",
+        "price": 14.99,
+        "rating": 4.0,
+        "imageUrl": "https://www.parents.com/thmb/MMu851e64yVbNqSofs_B9T0jG6s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/learning-friends-100-word-book-6f1783ecf1494a96b4961d4edb934ff6.jpeg"
+      },
+      {
+        "id": 4,
+        "name": "Language Toy 2",
+        "price": 29.99,
+        "rating": 4.8,
+        "imageUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1667857037-41tIuMGds1L._SL500_.jpg"
+      }
+    ],
+    "engineeringToys": [
+      {
+        "id": 5,
+        "name": "Engineering Toy 1",
+        "price": 39.99,
+        "rating": 4.7,
+        "imageUrl": "https://static-01.daraz.com.bd/p/b0e346c48abd9e322e3afdceb7038a28.jpg_720x720.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Engineering Toy 2",
+        "price": 49.99,
+        "rating": 4.6,
+        "imageUrl": "https://th-thumbnailer.cdn-si-edu.com/i6yM-wP8iFMejp5q7I3KFY2HpMw=/fit-in/1072x0/filters:focal(640x640:641x641)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/63/3c/633cc460-a53c-4434-a223-c97cbc93b453/hubelino_pi_marble_run_set.jpg"
+      }
+    ]
+  }
+  
