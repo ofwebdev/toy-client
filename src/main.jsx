@@ -14,6 +14,7 @@ import Register from "./components/Auth/Register.jsx";
 import Login from "./components/Auth/Login.jsx";
 import ToyDetails from "./components/Details/ToyDetails.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+import BlogPage from "./components/Blog/BlogPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
         <ToyDetails />
       </PrivateRoute>
     ),
+  },
+
+  {
+    path: "/blog",
+    element: <BlogPage />,
   },
 
   {
