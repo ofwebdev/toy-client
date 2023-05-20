@@ -1,13 +1,14 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 function Register() {
+  useTitle("Register user");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [photoUrl, setPhotoUrl] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");

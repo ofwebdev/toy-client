@@ -1,7 +1,9 @@
 import React from "react";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 function AddToy() {
+  useTitle("Add toy to database");
   const handleAddToy = (e) => {
     e.preventDefault();
     const form = e.target;
