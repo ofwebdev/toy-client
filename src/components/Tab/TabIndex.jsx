@@ -55,7 +55,7 @@ const TabIndex = () => {
                       </svg>
                     </div>
                     <Link
-                      to={`/view/${toy.id}`}
+                      to={`/toy/${toy.id}`}
                       className="mt-2 bg-blue-500 text-white px-4 py-2 rounded block"
                     >
                       View Details
