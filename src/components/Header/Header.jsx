@@ -1,7 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 function Header() {
+  const [success, setSuccess] = useState(false);
+  const location = useLocation();
+
+  const { user, logOut } = useContext(AuthContext);
+  const logoutHandler = () => {
+    logOut()
+      .then(() => {
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 1000);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -30,10 +45,51 @@ function Header() {
           <li>
             <Link to="/blog">Blogs</Link>
           </li>
+          <li>
+            {user ? (
+              <Link onClick={logoutHandler}>Logout</Link>
+            ) : (
+              <Link
+                to="/login"
+                className={location.pathname === "/login" ? "active" : ""}
+              >
+                Login
+              </Link>
+            )}
+          </li>
+
+          <li>
+            <Link to="/register">Register</Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">User Profile Picture</a>
+        {user ? (
+          <div
+            className="profile"
+            style={{
+              padding: "5px 6px",
+              background: "#e8e8e7",
+              borderRadius: "50px",
+              marginLeft: "10px",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            {user.photoURL && (
+              <img
+                width="30"
+                height="30"
+                style={{ borderRadius: "50%" }}
+                src={user.photoURL}
+                alt=""
+              />
+            )}
+            {user.displayName && (
+              <p className="mb-0 ms-1">{user.displayName}</p>
+            )}
+          </div>
+        ) : null}
       </div>
     </div>
   );

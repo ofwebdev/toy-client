@@ -9,6 +9,9 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Notfound from "./components/NotFound/Notfound.jsx";
 import AddToy from "./components/AddToy/AddToy.jsx";
+import AuthProvider from "./provider/AuthProvider.jsx";
+import Register from "./components/Auth/Register.jsx";
+import Login from "./components/Auth/Login.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,15 @@ const router = createBrowserRouter([
     path: "/addToy",
     element: <AddToy></AddToy>,
   },
+
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
   {
     path: "*",
     element: <Notfound />,
@@ -27,6 +39,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
