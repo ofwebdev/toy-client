@@ -20,13 +20,13 @@ function Header() {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <a className="ml-3 normal-case text-xl">
+        <Link to="/" className="ml-3 normal-case text-xl">
           <img
             src="https://i.ibb.co/XSBptSt/Black-White-Minimalist-Business-Logo-removebg-preview-3.png"
             alt=""
             style={{ height: "50px", width: "200px" }}
           />
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -36,15 +36,23 @@ function Header() {
           <li>
             <Link to="/allToys">All Toys</Link>
           </li>
-          <li>
-            <Link to="/myToys">My Toys</Link>
-          </li>
-          <li>
-            <Link to="/addToy">Add A Toy</Link>
-          </li>
+
+          {user ? (
+            <li>
+              <Link to="/myToys">My Toys</Link>
+            </li>
+          ) : null}
+
+          {user ? (
+            <li>
+              <Link to="/addToy">Add A Toy</Link>
+            </li>
+          ) : null}
+
           <li>
             <Link to="/blog">Blogs</Link>
           </li>
+
           <li>
             {user ? (
               <Link onClick={logoutHandler}>Logout</Link>
@@ -57,12 +65,9 @@ function Header() {
               </Link>
             )}
           </li>
-
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
         </ul>
       </div>
+
       <div className="navbar-end">
         {user ? (
           <div

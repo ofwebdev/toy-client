@@ -1,0 +1,61 @@
+{
+    "toys": [
+      {
+        "category": "Science Kits",
+        "name": "Chemistry Set",
+        "age_range": "8+",
+        "description": "A comprehensive chemistry set with experiments for learning basic chemical reactions and principles.",
+        "image": "https://m.media-amazon.com/images/I/81tN+gFbGBL.jpg"
+      },
+      {
+        "category": "Science Kits",
+        "name": "Physics Lab",
+        "age_range": "10+",
+        "description": "A physics laboratory kit with experiments for understanding concepts like motion, forces, and energy.",
+        "image": "https://m.media-amazon.com/images/I/716widVNlhL._AC_SL1500_.jpg"
+      },
+      {
+        "category": "Math Learning Toys",
+        "name": "Math Manipulative Set",
+        "age_range": "5+",
+        "description": "A set of math manipulatives and tools for hands-on learning of mathematical concepts.",
+        "image": "https://storebd.com.bd/wp-content/uploads/2021/01/Multicolor-Beads-Design-Educational-Wooden-Abacus-Toy-Children-Counting-Number-Early-Learning-Toy-For-Kid-Math.jpg"
+      },
+      {
+        "category": "Math Learning Toys",
+        "name": "Math Puzzle Game",
+        "age_range": "8+",
+        "description": "A fun and challenging math puzzle game that enhances problem-solving and critical thinking skills.",
+        "image": "https://m.media-amazon.com/images/I/71QWNBPqbGL._AC_SL1500_.jpg"
+      },
+      {
+        "category": "Engineering Kits",
+        "name": "Robotics Kit",
+        "age_range": "12+",
+        "description": "A robotics kit with components and instructions for building and programming your own robots.",
+        "image": "https://www.mathworks.com/company/newsletters/articles/creating-a-virtual-hands-on-mechatronics-course-with-matlab-simulink-and-the-arduino-engineering-kit/_jcr_content/mainParsys/image_0_copy_copy_co_532921699.adapt.full.medium.jpg/1673943474375.jpg"
+      },
+      {
+        "category": "Engineering Kits",
+        "name": "Electronics Circuit Set",
+        "age_range": "10+",
+        "description": "A set of electronic components for building circuits and learning about electricity and circuits.",
+        "image": "https://m.media-amazon.com/images/I/81Zg5iN2iES._AC_SL1500_.jpg"
+      },
+      {
+        "category": "Engineering Tools",
+        "name": "Building Blocks Set",
+        "age_range": "3+",
+        "description": "A set of building blocks for young children to develop fine motor skills and spatial awareness.",
+        "image": "https://img.freepik.com/free-photo/circle-from-safety-gear-drafting-supplies_23-2147831939.jpg?size=626&ext=jpg&ga=GA1.1.913219706.1684608201&semt=ais"
+      },
+      {
+        "category": "Engineering Tools",
+        "name": "Tool Kit for Kids",
+        "age_range": "6+",
+        "description": "A tool kit with child-sized tools for learning basic engineering and DIY skills.",
+        "image": "https://img.freepik.com/free-photo/tools-table_144627-8677.jpg?size=626&ext=jpg"
+      }
+    ]
+  }
+  

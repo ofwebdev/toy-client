@@ -1,6 +1,8 @@
 import React from "react";
 import Swal from "sweetalert2";
 import useTitle from "../../hooks/useTitle";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function AddToy() {
   useTitle("Add toy to database");
@@ -63,144 +65,148 @@ function AddToy() {
   };
 
   return (
-    <div className="bg-[#F4F3F0] p-24">
-      <h2 className="text-3xl font-extrabold">Add a Toy</h2>
-      <form onSubmit={handleAddToy}>
-        {/* <!-- Toy name, Picture URL, and Seller Name --> */}
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
-            <label className="label">
-              <span className="label-text">Toy Name</span>
-            </label>
-            <label className="input-group rounded-md">
-              <input
-                type="text"
-                name="name"
-                placeholder="Toy Name"
-                className="input input-bordered w-full"
-              />
-            </label>
+    <>
+      <Header />
+      <div className="bg-[#F4F3F0] p-24">
+        <h2 className="text-3xl font-extrabold">Add a Toy</h2>
+        <form onSubmit={handleAddToy}>
+          {/* <!-- Toy name, Picture URL, and Seller Name --> */}
+          <div className="md:flex mb-8">
+            <div className="form-control md:w-1/2">
+              <label className="label">
+                <span className="label-text">Toy Name</span>
+              </label>
+              <label className="input-group rounded-md">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Toy Name"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">Picture URL</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="text"
+                  name="picture"
+                  placeholder="Picture URL"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">Picture URL</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="picture"
-                placeholder="Picture URL"
-                className="input input-bordered w-full"
-              />
-            </label>
+          {/* <!-- Seller Name and Email --> */}
+          <div className="md:flex mb-8">
+            <div className="form-control md:w-1/2">
+              <label className="label">
+                <span className="label-text">Seller Name</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="text"
+                  name="sellerName"
+                  placeholder="Seller Name"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">Seller Email</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="email"
+                  name="sellerEmail"
+                  placeholder="Seller Email"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
           </div>
-        </div>
-        {/* <!-- Seller Name and Email --> */}
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
-            <label className="label">
-              <span className="label-text">Seller Name</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="sellerName"
-                placeholder="Seller Name"
-                className="input input-bordered w-full"
-              />
-            </label>
+          {/* <!-- Sub-category, Price, Rating, and Available Quantity --> */}
+          <div className="md:flex mb-8">
+            <div className="form-control md:w-1/2">
+              <label className="label">
+                <span className="label-text">Pick the best sub category</span>
+              </label>
+              <select
+                className="select select-bordered"
+                name="subcategory"
+                defaultValue="Pick one"
+              >
+                <option disabled value="Pick one">
+                  Pick one
+                </option>
+                <option value="Math Toys">Math Toys</option>
+                <option value="Language Toys">Language Toys</option>
+                <option value="Engineering toys">Engineering toys</option>
+                <option value="Science Toys">Science Toys</option>
+              </select>
+            </div>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">Price</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="number"
+                  name="price"
+                  placeholder="Price"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">Seller Email</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="email"
-                name="sellerEmail"
-                placeholder="Seller Email"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-        </div>
-        {/* <!-- Sub-category, Price, Rating, and Available Quantity --> */}
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
-            <label className="label">
-              <span className="label-text">Pick the best sub category</span>
-            </label>
-            <select
-              className="select select-bordered"
-              name="subcategory"
-              defaultValue="Pick one"
-            >
-              <option disabled value="Pick one">
-                Pick one
-              </option>
-              <option value="Math Toys">Math Toys</option>
-              <option value="Language Toys">Language Toys</option>
-              <option value="Engineering toys">Engineering toys</option>
-              <option value="Science Toys">Science Toys</option>
-            </select>
-          </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">Price</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="number"
-                name="price"
-                placeholder="Price"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-        </div>
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
-            <label className="label">
-              <span className="label-text">Available Quantity</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="number"
-                name="quantity"
-                placeholder="Available Quantity"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">Detail Description</span>
-            </label>
-            <label className="input-group">
-              <textarea
-                name="description"
-                placeholder="Detail Description"
-                className="textarea textarea-bordered w-full"
-              ></textarea>
-            </label>
-          </div>
+          <div className="md:flex mb-8">
+            <div className="form-control md:w-1/2">
+              <label className="label">
+                <span className="label-text">Available Quantity</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="number"
+                  name="quantity"
+                  placeholder="Available Quantity"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">Detail Description</span>
+              </label>
+              <label className="input-group">
+                <textarea
+                  name="description"
+                  placeholder="Detail Description"
+                  className="textarea textarea-bordered w-full"
+                ></textarea>
+              </label>
+            </div>
 
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">Rating</span>
-            </label>
-            <label className="input-group">
-              <input
-                name="rating"
-                placeholder="Rating"
-                className="input textarea-bordered w-full"
-              />
-            </label>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">Rating</span>
+              </label>
+              <label className="input-group">
+                <input
+                  name="rating"
+                  placeholder="Rating"
+                  className="input textarea-bordered w-full"
+                />
+              </label>
+            </div>
           </div>
-        </div>
-        <input type="submit" value="Add Toy" className="btn btn-block" />
-      </form>
-    </div>
+          <input type="submit" value="Add Toy" className="btn btn-block" />
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 }
 
