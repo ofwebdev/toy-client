@@ -67,7 +67,7 @@ function AddToy() {
   return (
     <>
       <Header />
-      <div className="bg-[#F4F3F0] p-24">
+      <div className="p-24">
         <h2 className="text-3xl font-extrabold">Add a Toy</h2>
         <form onSubmit={handleAddToy}>
           {/* <!-- Toy name, Picture URL, and Seller Name --> */}

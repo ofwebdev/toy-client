@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import useTitle from "../../hooks/useTitle";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../provider/AuthProvider";
 
 function AllToys() {
   useTitle("All toys");
   const toyFetchState = useLoaderData();
   const [toys, setToys] = useState(toyFetchState);
+  const { user } = useContext(AuthContext);
 
   const [loading, setLoading] = useState(false);
 
@@ -73,15 +75,23 @@ function AllToys() {
           >
             View Details
           </Link>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            🖋️
-          </button>
-          <button
-            onClick={() => handelDelete(toy._id)}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            ❌
-          </button>
+
+          {user ? (
+            <>
+              <Link
+                to={`/updateToy/${toy._id}`}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                🖋️
+              </Link>
+              <button
+                onClick={() => handelDelete(toy._id)}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                ❌
+              </button>
+            </>
+          ) : null}
         </td>
       </tr>
     ));
