@@ -1,6 +1,6 @@
 import React from "react";
 
-function Slick() {
+function Slider() {
   return (
     <div className="container mx-auto">
       <div className="carousel w-full">
@@ -65,4 +65,4 @@ function Slick() {
   );
 }
 
-export default Slick;
+export default Slider;

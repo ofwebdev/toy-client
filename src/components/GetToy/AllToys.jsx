@@ -90,12 +90,12 @@ function AllToys() {
   return (
     <>
       <Header />
-      <div className="container mx-auto py-16">
+      <div className="p-10 py-16">
         <h2 className="text-2xl font-bold mb-4">All Toys</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <table className="w-full">
+          <table className="w-full pt-10">
             <thead>
               <tr>
                 <th className="p-2 bg-gray-100 text-left text-gray-600 font-bold">

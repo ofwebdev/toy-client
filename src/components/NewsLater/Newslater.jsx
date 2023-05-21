@@ -1,6 +1,6 @@
 import React from "react";
 
-function Newslater() {
+function NewsLater() {
   return (
     <div className="py-8 px-4 sm:px-8">
       <div className="max-w-screen-md mx-auto">
