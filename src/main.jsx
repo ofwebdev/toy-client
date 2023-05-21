@@ -19,6 +19,7 @@ import AllToys from "./components/GetToy/AllToys.jsx";
 import UpdateToy from "./components/UpdateToy/UpdateToy.jsx";
 import SearchToy from "./components/Serach/SearchToy.jsx";
 import ViewDetails from "./components/GetToy/ViewDetails.jsx";
+import MyToy from "./components/MyToys/Mytoy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
   {
     path: "/allToys",
     element: <AllToys />,
+    loader: () => fetch("http://localhost:5000/toy"),
+  },
+
+  {
+    path: "/myToys",
+    element: <MyToy />,
     loader: () => fetch("http://localhost:5000/toy"),
   },
 

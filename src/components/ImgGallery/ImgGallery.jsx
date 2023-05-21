@@ -16,7 +16,8 @@ function ImgGallery() {
   }, []);
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-16">
+      <h1 className="text-3xl text-center py-16">Toy Gallery</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-16">
         {galleryData.map((toy) => (
           <React.Fragment key={toy.name}>
             <div className="relative group">

@@ -22,4 +22,4 @@ function NewsLater() {
   );
 }
 
-export default Newslater;
+export default NewsLater;
