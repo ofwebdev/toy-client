@@ -15,11 +15,33 @@ import Login from "./components/Auth/Login.jsx";
 import ToyDetails from "./components/Details/ToyDetails.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import BlogPage from "./components/Blog/BlogPage.jsx";
+import AllToys from "./components/GetToy/AllToys.jsx";
+import UpdateToy from "./components/UpdateToy/UpdateToy.jsx";
+import SearchToy from "./components/Serach/SearchToy.jsx";
+import ViewDetails from "./components/GetToy/ViewDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+  },
+
+  {
+    path: "/allToys",
+    element: <AllToys />,
+    loader: () => fetch("http://localhost:5000/toy"),
+  },
+
+  {
+    path: "/details/:id",
+    element: <ViewDetails />,
+    loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`),
+  },
+
+  {
+    path: "/updateToy/:id",
+    element: <UpdateToy />,
+    loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`),
   },
   {
     path: "/addToy",
@@ -29,6 +51,12 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
   },
+
+  // {
+  //   path: "/addToy",
+  //   element: <SearchToy />,
+  //   loader: ({ params }) => fetch(`http://localhost:5000/toy/serach`),
+  // },
 
   {
     path: "/toy/:id",
