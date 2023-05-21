@@ -34,7 +34,7 @@ function AddToy() {
 
     console.log(newToy);
 
-    fetch("http://localhost:5000/toy", {
+    fetch("https://toy-store-server-six.vercel.app/toy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

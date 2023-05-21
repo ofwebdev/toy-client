@@ -11,7 +11,7 @@ function SearchToy() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/toy/search?query=${searchQuery}`
+          `https://toy-store-server-six.vercel.app/toy/search?query=${searchQuery}`
         );
         const data = await response.json();
         setToys(data);
