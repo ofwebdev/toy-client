@@ -36,16 +36,17 @@ function AllToys() {
     })
       .then((result) => {
         if (result.isConfirmed) {
-          fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${_id}`, {
+          fetch(`https://toy-store-server-chi.vercel.app/toy/${_id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
             .then((data) => {
               console.log(data);
 
-              if (data.deleteCount > 0) {
+              if (data.deletedCount > 0) {
                 Swal.fire("Deleted!", "Your file has been deleted.", "success");
                 // Update the toys state by removing the deleted toy
+                console.log({ _id, toys });
                 const updatedToys = toys.filter((toy) => toy._id !== _id);
                 setToys(updatedToys);
               }

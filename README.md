@@ -15,7 +15,7 @@ If you have any questions, suggestions, or just want to say hi, feel free to rea
 Here are a few projects that I have been working on:
 
 - [Client site](https://toy-client-6e9f6.web.app/): A web application for managing and exploring recipes.
-- [Server site](https://toy-store-server-ofwebdev.vercel.app/): A server-side application that handles data processing and management.
+- [Server site](https://toy-store-server-chi.vercel.app/): A server-side application that handles data processing and management.
 
 ### ➡️ Key Features
 

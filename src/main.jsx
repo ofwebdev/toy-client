@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 // Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -17,9 +15,9 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import BlogPage from "./components/Blog/BlogPage.jsx";
 import AllToys from "./components/GetToy/AllToys.jsx";
 import UpdateToy from "./components/UpdateToy/UpdateToy.jsx";
-import SearchToy from "./components/Serach/SearchToy.jsx";
+// import SearchToy from "./components/Serach/Search.jsx";
 import ViewDetails from "./components/GetToy/ViewDetails.jsx";
-import MyToy from "./components/MyToys/Mytoy.jsx";
+import MyToy from "./components/MyToys/MyToy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,13 +28,13 @@ const router = createBrowserRouter([
   {
     path: "/allToys",
     element: <AllToys />,
-    loader: () => fetch("https://toy-store-server-ofwebdev.vercel.app/toy"),
+    loader: () => fetch("https://toy-store-server-chi.vercel.app/toy"),
   },
 
   {
     path: "/myToys",
     element: <MyToy />,
-    loader: () => fetch("https://toy-store-server-ofwebdev.vercel.app/toy"),
+    loader: () => fetch("https://toy-store-server-chi.vercel.app/toy"),
   },
 
   {
@@ -47,14 +45,14 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: ({ params }) =>
-      fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${params.id}`),
+      fetch(`https://toy-store-server-chi.vercel.app/toy/${params.id}`),
   },
 
   {
     path: "/updateToy/:id",
     element: <UpdateToy />,
     loader: ({ params }) =>
-      fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${params.id}`),
+      fetch(`https://toy-store-server-chi.vercel.app/toy/${params.id}`),
   },
   {
     path: "/addToy",
@@ -68,7 +66,7 @@ const router = createBrowserRouter([
   // {
   //   path: "/addToy",
   //   element: <SearchToy />,
-  //   loader: ({ params }) => fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/serach`),
+  //   loader: ({ params }) => fetch(`https://toy-store-server-chi.vercel.app/toy/serach`),
   // },
 
   {
