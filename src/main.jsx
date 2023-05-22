@@ -30,13 +30,13 @@ const router = createBrowserRouter([
   {
     path: "/allToys",
     element: <AllToys />,
-    loader: () => fetch("https://toy-store-server-six.vercel.app/toy"),
+    loader: () => fetch("https://toy-store-server-ofwebdev.vercel.app/toy"),
   },
 
   {
     path: "/myToys",
     element: <MyToy />,
-    loader: () => fetch("https://toy-store-server-six.vercel.app/toy"),
+    loader: () => fetch("https://toy-store-server-ofwebdev.vercel.app/toy"),
   },
 
   {
@@ -47,14 +47,14 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: ({ params }) =>
-      fetch(`https://toy-store-server-six.vercel.app/toy/${params.id}`),
+      fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${params.id}`),
   },
 
   {
     path: "/updateToy/:id",
     element: <UpdateToy />,
     loader: ({ params }) =>
-      fetch(`https://toy-store-server-six.vercel.app/toy/${params.id}`),
+      fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${params.id}`),
   },
   {
     path: "/addToy",
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
   // {
   //   path: "/addToy",
   //   element: <SearchToy />,
-  //   loader: ({ params }) => fetch(`https://toy-store-server-six.vercel.app/toy/serach`),
+  //   loader: ({ params }) => fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/serach`),
   // },
 
   {
