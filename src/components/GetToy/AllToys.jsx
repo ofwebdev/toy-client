@@ -36,7 +36,7 @@ function AllToys() {
     })
       .then((result) => {
         if (result.isConfirmed) {
-          fetch(`https://toy-store-server-six.vercel.app/toy/${_id}`, {
+          fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${_id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())

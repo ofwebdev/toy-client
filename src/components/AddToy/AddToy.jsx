@@ -17,7 +17,7 @@ function AddToy() {
     const sellerName = form.sellerName.value;
     const sellerEmail = form.sellerEmail.value;
     const subcategory = form.subcategory.value;
-    const rating = form.subcategory.value;
+    const rating = form.rating.value;
     const price = form.price.value;
 
     const newToy = {
@@ -34,7 +34,7 @@ function AddToy() {
 
     console.log(newToy);
 
-    fetch("https://toy-store-server-six.vercel.app/toy", {
+    fetch("https://toy-store-server-ofwebdev.vercel.app/toy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,11 +57,11 @@ function AddToy() {
           // Handle the case when either insertedId or acknowledged is missing
           console.log("Error: Invalid response data");
         }
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-        // Handle any network or server-side errors here
       });
+    // .catch((error) => {
+    //   console.log("Error:", error);
+    //   // Handle any network or server-side errors here
+    // });
   };
 
   return (

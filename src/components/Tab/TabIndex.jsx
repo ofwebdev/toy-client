@@ -14,8 +14,6 @@ const TabIndex = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  console.log(toysData);
-
   return (
     <div className="p-4 flex items-center justify-center">
       <Tabs>

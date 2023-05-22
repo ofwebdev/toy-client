@@ -47,7 +47,7 @@ function UpdateToy() {
       rating,
       price,
     };
-    fetch(`https://toy-store-server-six.vercel.app/toy/${_id}`, {
+    fetch(`https://toy-store-server-ofwebdev.vercel.app/toy/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -66,8 +66,6 @@ function Register() {
         if (error.code === "auth/email-already-in-use") {
           setError("The email address you entered is already in use.");
           setSuccess(false);
-        } else {
-          setError("An error occurred. Please try again later.");
         }
       });
   };
